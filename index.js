@@ -23,10 +23,7 @@ app.use(express.json());
 app.use(ExpressSession);
 app.use(helmet());
 app.use(morgan('dev'));
-app.use(cors({
-    origin: 'http://localhost:3000',
-    credentials: true,
-}));
+app.use(cors());
 app.use(cookieParser());
 
 // Main Router
