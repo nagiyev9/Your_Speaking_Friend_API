@@ -129,9 +129,7 @@ export const confirmAccount = async (req, res) => {
 export const login = async (req, res) => {
     try {
         const { email, password } = req.body;
-        console.log(email);
-        console.log(password);
-
+        
         if (!email || !password) {
             return res.status(400).json({ message: "Please fill all fields" });
         }
